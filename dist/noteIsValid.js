@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.noteIsValid = void 0;
 const noteIsValid = (note) => __awaiter(void 0, void 0, void 0, function* () {
     const checks = [
+        (n) => !!n.title && n.title.length > 0,
         (n) => !!n.body,
         (n) => n.body.length >= 20,
         (n) => n.body.length <= 300

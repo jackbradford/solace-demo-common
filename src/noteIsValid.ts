@@ -3,6 +3,7 @@ import { Note } from './types';
 export const noteIsValid = async (note: Note) => {
 
   const checks = [
+    (n: Note) => !!n.title && n.title.length > 0,
     (n: Note) => !!n.body,
     (n: Note) => n.body.length >= 20,
     (n: Note) => n.body.length <= 300
